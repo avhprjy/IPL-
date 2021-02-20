@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1> <center> IPL Player Information</center></h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Player country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipls.each do |ipl| %>
+      <tr>
+        <td><%= ipl.player_name %></td>
+        <td><%= ipl.player_country %></td>
+        <td><%= link_to 'Show', ipl %></td>
+        <td><%= link_to 'Edit', edit_ipl_path(ipl) %></td>
+        <td><%= link_to 'Destroy', ipl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ipl', new_ipl_path, class: "btn btn-info" %>

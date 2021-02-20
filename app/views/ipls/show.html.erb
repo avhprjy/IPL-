@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @ipl.player_name %>
+</p>
+
+<p>
+  <strong>Player country:</strong>
+  <%= @ipl.player_country %>
+</p>
+
+<%= link_to 'Edit', edit_ipl_path(@ipl) %> |
+<%= link_to 'Back', ipls_path %>
