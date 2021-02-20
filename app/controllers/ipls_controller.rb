@@ -73,7 +73,7 @@ class IplsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ipl_params
-      params.require(:ipl).permit(:player_name, :player_country)
+      params.require(:ipl).permit(:player_name, :player_country, :team_name)
     end
 
     def get_countries
